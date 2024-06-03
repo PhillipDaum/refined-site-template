@@ -1,0 +1,165 @@
+/* Brand Colors and Font */
+:root {
+    --background: #ffffea;
+    --first: #465362;
+    --second: #77A6B6;
+    --highlight: #CB793A;
+    --secondary-background: #ffd034;
+    --roboto: "Roboto", sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* navbar */
+nav ul {
+    list-style: none;
+    /* could switch to grid */
+    display: flex;
+    justify-content: center;
+    gap: .11rem;
+    padding-right: 1rem;
+    padding-top: .78rem;
+}
+nav li {
+    cursor: pointer;
+}
+nav a {
+    text-decoration: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: black;
+}
+nav a:hover {
+    border-bottom: var(--second) solid .11rem;
+    /* text-decoration: underline var(--second); */
+}
+
+/* button */
+.button {
+    border: var(--first) .15rem solid;
+    border-radius: .24rem;
+    padding: 1rem;
+    color: black;
+    background-color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.button:hover {
+    border: var(--highlight) .15rem solid;
+}
+
+/* dunno how to title this section */
+body {
+    font-family: var(--roboto);
+}
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.hero{
+    margin: 1rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    text-align: center;
+}
+.wrapper{
+    margin: 1rem;
+    padding-top: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.small-card {
+    border-bottom: var(--second) solid .11rem;
+}
+.small-card ul {
+    list-style-type: none;
+    line-height: 1.5;
+}
+/* .small-card ul {
+    border: .11rem red solid;
+}  */
+.org-outside {
+    padding-left: .2rem;;
+}
+.small-card ul li li {
+    border-bottom: red .11rem solid;
+}
+.big-card {
+    padding-top: 4rem;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/* footer */
+#page-container {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-items: center;
+}
+#content-wrap {
+    padding-bottom: 2.5rem;
+    width: 100%;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+footer p{
+    font-size: .85rem;
+    color: black;
+    margin-bottom: .2rem;
+    padding-left: .5rem;
+}
+/* media queries for responsive design */
+/* later we can change this to a hamburger button at small sizes */
+@media (min-width: 600px) {
+    header{
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* @media (min-width: 1100px) {
+    .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+/* below here is rickroll stuff
+to remove: delete rickroll.html, all code below this point,
+also change the function in index.js to lauch the app
+and remove the assets folder (or just the stuff in it, cus 
+we can use it later.) */
+.rick-roll {
+    background-image: url(https://media.giphy.com/media/kHGxZUxfTTInkeybFo/giphy.gif?cid=790b7611ta35mu191czo7xlf37muiml4a0a24rrq3s9wfibs&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  }
